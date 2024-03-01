@@ -3,7 +3,8 @@ from Factorial import app
 
 def test_service_factorial():
   rsp = app.test_client().get("/factorial/7")
-  assert rsp.status_code == 200
+
+  assert rsp.status_code == 300
   assert rsp.json == {"result":5040}
 
 @pytest.mark.parametrize("n,expected",
